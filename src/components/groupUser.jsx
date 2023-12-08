@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function groupUser() {
+export default function GroupUser({ sorting, ticket }) {
   return (
-    <div>groupUser</div>
+    <div>
+        groupUser {sorting}
+    </div>
   )
 }

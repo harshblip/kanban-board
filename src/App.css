@@ -37,3 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
+.font-nunito {
+  font-family: 'Nunito Sans', sans-serif;
+}

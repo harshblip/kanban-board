@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function groupPriority() {
+export default function GroupPriority({ sorting, ticket }) {
   return (
-    <div>groupPriority</div>
+    <div>
+        groupPriority{sorting}
+    </div>
   )
 }

@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function groupStatus() {
+export default function GroupStatus({ sorting, ticket }) {
   return (
-    <div>groupStatus</div>
+    <div>
+        groupStatus{sorting}
+    </div>
   )
 }

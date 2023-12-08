@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import GroupPriority from './components/GroupPriority';
+import GroupStatus from './components/GroupStatus';
+import GroupUser from './components/GroupUser';
+import Home from './components/Home';
 
 export default function App() {
   const [grouping, setGrouping] = useState(localStorage.getItem('grouping') || 'user');
@@ -27,12 +31,22 @@ export default function App() {
   }, [grouping, sorting]);
 
   return (
-    <div>
+    <div className='font-nunito'>
       <select value={grouping} onChange={e => setGrouping(e.target.value)}>
+        <option value="">Select Grouping</option>
         <option value="user">Group by User</option>
         <option value="priority">Group by Priority</option>
         <option value="status">Group by Status</option>
       </select>
+      <select value={sorting} onChange={e => setSorting(e.target.value)}>
+        <option value="">Select Sorting</option>
+        <option value="priority">Sort by Priority</option>
+        <option value="title">Sort by Title</option>
+      </select>
+      {grouping === 'user' && <GroupUser sorting={sorting} tickets={tickets} />}
+      {grouping === 'priority' && <GroupPriority sorting={sorting} tickets={tickets} />}
+      {grouping === 'status' && <GroupStatus sorting={sorting} tickets={tickets} />}
+      {!grouping && !sorting && <Home />}
     </div>
   )
 }
