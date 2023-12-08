@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import GroupPriority from './components/GroupPriority';
-import GroupStatus from './components/GroupStatus';
-import GroupUser from './components/GroupUser';
+import GroupPriority from './components/GroupPriority/GroupPriority';
+import GroupStatus from './components/GroupStatus/GroupStatus';
+import GroupUser from './components/GroupUser/GroupUser';
 import Home from './components/Home';
 
 export default function App() {
-  const [grouping, setGrouping] = useState(localStorage.getItem('grouping') || 'user');
-  const [sorting, setSorting] = useState(localStorage.getItem('sorting') || 'priority');
+  const [grouping, setGrouping] = useState(localStorage.getItem('grouping'));
+  const [sorting, setSorting] = useState(localStorage.getItem('sorting'));
   const [tickets, setTickets] = useState([]);
 
   useEffect(() => {
@@ -32,13 +32,21 @@ export default function App() {
 
   return (
     <div className='font-nunito'>
-      <select value={grouping} onChange={e => setGrouping(e.target.value)}>
+      <select value={grouping} onChange={e => {
+        setGrouping(e.target.value)
+        localStorage.setItem('grouping', e.target.value);
+      }
+      }>
         <option value="">Select Grouping</option>
         <option value="user">Group by User</option>
         <option value="priority">Group by Priority</option>
         <option value="status">Group by Status</option>
       </select>
-      <select value={sorting} onChange={e => setSorting(e.target.value)}>
+      <select value={sorting} onChange={e => {
+        setSorting(e.target.value)
+        localStorage.setItem('sorting', e.target.value);
+      }
+      }>
         <option value="">Select Sorting</option>
         <option value="priority">Sort by Priority</option>
         <option value="title">Sort by Title</option>
