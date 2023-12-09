@@ -5,6 +5,7 @@ export default function Card({ index }) {
   return (
     <div className = 'card'>
         {index.title}
+        {index.priority}
     </div>
   )
 }

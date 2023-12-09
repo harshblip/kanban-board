@@ -1,0 +1,55 @@
+.navbar {
+    height: 10vh;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 80,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 10
+}
+
+.material-symbols-outlined {
+    transform: scale(0.8);
+}
+
+.bt {
+    display: flex;
+    background: #ffffff;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 10px #ebeaea;
+    border: white;
+    padding: 0.5rem;
+    transition: all smooth 0.4s;
+}
+
+.bt.no-margin-top {
+    margin-top: 0;
+}
+
+button:active {
+    transform: translateZ(3px);
+}
+
+.bt-text {
+    font-weight:600;
+    font-family: 'Nunito Sans', sans-serif;   
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bt-text  .h {
+    color: #9d9d9d;
+    font-weight: 700;
+}
+
+.box {
+    width: 10rem;
+    background-color: white;
+}

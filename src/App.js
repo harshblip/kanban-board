@@ -34,7 +34,7 @@ export default function App() {
   return (
     <div>
       <Navbar grouping={grouping} setGrouping={setGrouping} sorting={sorting} setSorting={setSorting} />
-      <div className='container'>
+      <div className='layout'>
         {grouping === 'user' && <GroupUser sorting={sorting} tickets={tickets} />}
         {grouping === 'priority' && <GroupPriority sorting={sorting} tickets={tickets} />}
         {grouping === 'status' && <GroupStatus sorting={sorting} tickets={tickets} />}

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  transition: all 2s;
+  transition: all 10s ease-out;
 }
 
 .App-logo {
@@ -44,8 +44,16 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
-  overflow: hidden;
+  overflow: auto;
+  height: 100vh;
+  margin-left: 2rem;
+  margin-right: 2rem;
   font-family: 'Nunito Sans', sans-serif;
+}
+
+.layout {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #ecedef;
 }
