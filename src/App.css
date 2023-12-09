@@ -42,18 +42,6 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
-  overflow: auto;
-  height: 100vh;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-.layout {
-  font-family: 'Nunito Sans', sans-serif;
-  background-color: #ecedef;
+.p {
+  color: #e9e9e9;
 }
