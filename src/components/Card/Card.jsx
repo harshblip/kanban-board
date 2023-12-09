@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import p1 from '../../../public/images/p1.jpg';
+import './Card.css'
 
 const CardDad = styled.div`
 max-width: 10rem;
@@ -13,17 +13,28 @@ background: #ffffff;
 border: 1px solid #e9e9e9;
 `
 
+const images = [
+  'images/p1.jpg', 'images/p2.jpg',
+  'images/p3.jpg', 'images/p4.jpg',
+  'images/p5.jpg'
+];
+
 export default function Card({ data }) {
   // tickets.map((x) => {
   //   console.log(x.id);
   // })
+  function getRandomImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    return images[randomIndex];
+  }
+
   return (
     <CardDad>
       <div className="row">
         <p>
           {data.title}
         </p>
-      <img src = {p1} alt = "p1" className='pfp'/>
+        <img src = {getRandomImage()} alt = "p1" className='pfp'/>
       </div>
       {data.id}
       {data.tag}
