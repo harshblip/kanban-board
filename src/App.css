@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -51,7 +52,14 @@
   justify-content: space-between;
 }
 
-.username { 
+.userS {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.username {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   margin-left: 2.5rem;
@@ -62,7 +70,40 @@
   margin-top: -1.8rem;
 }
 
-.fn { 
+.fn {
   color: #969595;
   font-weight: 600;
+}
+
+.material-symbols-outlined.block-icon {
+  color: black;
+  font-size: 36px;
+}
+
+.material-symbols-outlined.tour-icon {
+  color: rgb(152, 152, 152);
+  font-size: 36px;
+}
+
+.material-symbols-outlined.contrast-icon {
+  color: orange;
+  font-size: 36px;
+}
+
+.material-symbols-outlined.check_circle-icon {
+  color: rgb(60, 60, 255);
+  font-size: 36px;
+}
+
+.material-symbols-outlined.cancel-icon {
+  color: rgb(255, 51, 51);
+  font-size: 36px;
+}
+
+.ss {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  position: absolute;
+  margin-top: 0.4rem;
+  margin-left: 0.2rem;
 }

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Box = styled.div`
 display: grid;
 grid-template-columns: repeat(5, 1fr);
-grid-gap: 10px;
+grid-gap: 50px;
 overflow: auto;
 height: 100vh;
 margin-left: 2rem;
