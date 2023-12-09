@@ -7,6 +7,7 @@ display: grid;
 grid-template-columns: repeat(5, 1fr);
 grid-gap: 50px;
 overflow: auto;
+overflow-y: visible;
 height: 100vh;
 margin-left: 2rem;
 margin-right: 2rem;

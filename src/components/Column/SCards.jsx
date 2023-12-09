@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../Card/Card'
 import styled from 'styled-components'
+import DummyCard from '../Card/DummyCard'
 
 const Divu = styled.div`
 margin-right: 2rem;
@@ -20,35 +21,43 @@ export default function SCards({ tickets, status }) {
     'Todo': 'tour',
     'In progress': 'contrast',
     'Done': 'check_circle',
-    'Cancelled': 'cancel'
+    'Cancelled': 'cancel',
+    'Add':'add',
+    "More":'more_horiz'
   };
+
+  const moreIcons = {
+    'add': 'add',
+    'more': 'more_horiz'
+  }
 
 
   return (
-    <Divu>
-      {
-        <div className='userS'>
-          <div>
-            <span className={`material-symbols-outlined ${statusIcons[status]}-icon`}>
-              {statusIcons[status]}
-            </span>
-            <span className='ss'>
-              {status}
-            </span>
-          </div>
-          <div>
-            <span className='material-symbols-outlined'>
-              add
-            </span>
-            <span className='material-symbols-outlined'>
-              more_horiz
-            </span>
-          </div>
+    <div>
+      <div className='srow'>
+
+        <div className='m'>
+          <span className={`material-symbols-outlined ${statusIcons[status]}-icon`}>
+            {statusIcons[status]}
+          </span>
+          <span className='ss'>
+            {status}
+          </span>
         </div>
+        <div>
+          <span className={`material-symbols-outlined ${moreIcons["add"]}-icon`}>
+            add
+          </span>
+          <span className='material-symbols-outlined'>
+            more_horiz
+          </span>
+        </div>
+      </div>
+      {
+        tickets.filter(ticket => ticket.status === status).map((index, x) => {
+          return <Card data={index} key={x} />
+        })
       }
-      {tickets.filter(ticket => ticket.status === status).map((index, x) => {
-        return <Card data={index} key={x} />
-      })}
-    </Divu>
+    </div>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import './Card.css'
 
+
 const CardDad = styled.div`
 max-width: 10rem;
 min-width: 16rem;
