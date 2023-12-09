@@ -19,6 +19,8 @@ const images = [
   'images/p5.jpg'
 ];
 
+const colors = ['orange', 'lightgray', 'green'];
+
 export default function Card({ data }) {
   // tickets.map((x) => {
   //   console.log(x.id);
@@ -28,19 +30,37 @@ export default function Card({ data }) {
     return images[randomIndex];
   }
 
+  function getRandomColor() {
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  }
+
   return (
     <CardDad>
       <div className="row">
+        <div>
+          <p className='id'>
+            {data.id}
+          </p>
+        </div>
+        <div>
+          <img src={getRandomImage()} alt="p1" className='pfp' />
+          <svg class="status-dot" width="10" height="10">
+            <circle cx="5" cy="5" r="5" fill={getRandomColor()} />
+          </svg>
+        </div>
+      </div>
+      <div className='col'>
         <p>
           {data.title}
         </p>
-        <img src = {getRandomImage()} alt = "p1" className='pfp'/>
+        <button className='fr'>
+          <svg class="status-dot" width="10" height="10">
+            <circle cx="5" cy="5" r="5" fill="lightgray" />
+          </svg>
+          {data.tag}
+        </button>
       </div>
-      {data.id}
-      {data.tag}
-      {data.userId}
-      {data.status}
-      {data.name}
     </CardDad>
   )
 }

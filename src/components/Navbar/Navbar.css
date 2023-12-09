@@ -16,7 +16,7 @@
 
 .bt {
     display: flex;
-    background: #ffffff;
+    background: #f4f5f8;
     margin-top: 1.5rem;
     margin-left: 2rem;
     border-radius: 0.5rem;
@@ -24,6 +24,7 @@
     border: white;
     padding: 0.5rem;
     transition: all smooth 0.4s;
+    position: absolute;
 }
 
 .bt.no-margin-top {
@@ -42,14 +43,50 @@ button:active {
 .row {
     display: flex;
     justify-content: space-between;
+    margin-left: 1rem;
 }
 
 .bt-text  .h {
     color: #9d9d9d;
     font-weight: 700;
+    position: relative;
 }
 
 .box {
-    width: 10rem;
-    background-color: white;
+    width: 18rem;
+    background-color: #f7f8fa;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    line-height: 2rem;
+    height: 6rem;
+    position: absolute;
+}
+
+.h {
+    margin-top: 1rem;
+    font-weight:600;
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(157, 156, 156);
+}
+
+.opts {
+    height: 25px;
+    font-weight:600;
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(157, 156, 156);
+    margin: 1.0rem;
+    margin-top: 1.4rem;
+}
+
+option {
+    font-weight:600;
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(157, 156, 156);
+    border: white;
+}
+
+option:hover {
+    background-color: rgb(157, 156, 156);
+    border-radius: 4px;
+    transition: all 0.4s;
 }

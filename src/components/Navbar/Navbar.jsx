@@ -37,7 +37,7 @@ export default function Navbar({ grouping, setGrouping, sorting, setSorting }) {
                                 setGrouping(e.target.value)
                                 localStorage.setItem('grouping', e.target.value);
                             }}
-                                className='.bt.no-margin-top'
+                                className='opts'
                             >
                                 <option value="" >Select Grouping</option>
                                 <option value="user">Group by User</option>
@@ -48,12 +48,14 @@ export default function Navbar({ grouping, setGrouping, sorting, setSorting }) {
                         <div className='row'>
                             <div className='h'>
                                 Ordering
-                                </div>
+                            </div>
                             <select value={sorting} onChange={e => {
                                 setSorting(e.target.value)
                                 localStorage.setItem('sorting', e.target.value);
                             }
-                            }>
+                            }
+                                className='opts'
+                            >
                                 <option value="">Select Sorting</option>
                                 <option value="priority">Sort by Priority</option>
                                 <option value="title">Sort by Title</option>

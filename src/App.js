@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 const Layout = styled.div`
   font-family: 'Nunito Sans', sans-serif;
-  background-color: #ecedef;
+  background-color: #f4f5f8;
 `
 
 export default function App() {
