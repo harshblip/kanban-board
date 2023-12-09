@@ -33,7 +33,6 @@ export default function Card({ data }) {
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
   }
-
   return (
     <CardDad>
       <div className="row">

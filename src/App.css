@@ -44,3 +44,25 @@
 .p {
   color: #e9e9e9;
 }
+
+.userD {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.username { 
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  margin-left: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.r {
+  margin-top: -1.8rem;
+}
+
+.fn { 
+  color: #969595;
+  font-weight: 600;
+}

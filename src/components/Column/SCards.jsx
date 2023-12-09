@@ -16,11 +16,13 @@ export default function SCards({ tickets, status }) {
   }
   return (
     <Divu>
-      <div>
         {
-          
+          <div>
+            <span className='material-symbols-outlined'>
+              
+            </span>
+          </div>          
         }
-      </div>
       {tickets.filter(ticket => ticket.status === status).map((index, x) => {
         return <Card data={index} key={x} />
       })}
