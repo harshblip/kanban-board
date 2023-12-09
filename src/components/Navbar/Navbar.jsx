@@ -5,7 +5,6 @@ export default function Navbar({ grouping, setGrouping, sorting, setSorting }) {
     const [click, setClick] = useState(false);
     const debug = () => {
         setClick(!click);
-        console.log('hi');
     }
     return (
         <div className='navbar'>

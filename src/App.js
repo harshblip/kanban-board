@@ -35,18 +35,18 @@ export default function App() {
       });
   }, [grouping, sorting]);
 
-  {users.map((x) => {
-    console.log(x.name);
-  })}
+  // {users.map((x) => {
+  //   console.log(x.name);
+  // })}
 
   return (
     <div className='App'>
       <Navbar grouping={grouping} setGrouping={setGrouping} sorting={sorting} setSorting={setSorting} />
       <Layout>
-        {grouping === 'user' && <GroupUser sorting={sorting} tickets={tickets} />}
+        {grouping === 'user' && <GroupUser sorting={sorting} tickets={tickets} users={users}/>}
         {grouping === 'priority' && <GroupPriority sorting={sorting} tickets={tickets} />}
         {grouping === 'status' && <GroupStatus sorting={sorting} tickets={tickets} />}
-        {!grouping && !sorting && <GroupStatus sorting={sorting} tickets={tickets}  />}
+        {!grouping && <GroupStatus sorting={sorting} tickets={tickets}  />}
       </Layout>
     </div>
   )

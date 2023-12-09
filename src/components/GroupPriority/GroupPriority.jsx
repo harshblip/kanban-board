@@ -15,9 +15,9 @@ font-family: 'Nunito Sans', sans-serif;
 
 export default function GroupPriority({ sorting, tickets }) {
   console.log('groupPriority', sorting)
-  {tickets.map((x) => {
-    console.log(x.title);
-  })}
+  // {tickets.map((x) => {
+  //   console.log(x.title);
+  // })}
   return (
     <Box>
       {/* priority, array */}

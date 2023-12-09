@@ -22,9 +22,8 @@ const images = [
 const colors = ['orange', 'lightgray', 'green'];
 
 export default function Card({ data }) {
-  // tickets.map((x) => {
-  //   console.log(x.id);
-  // })
+  // console.log('data.title')
+  console.log(data.id, data.title);
   function getRandomImage() {
     const randomIndex = Math.floor(Math.random() * images.length);
     return images[randomIndex];
