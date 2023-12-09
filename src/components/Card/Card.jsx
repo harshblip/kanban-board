@@ -5,7 +5,7 @@ import './Card.css'
 const CardDad = styled.div`
 max-width: 10rem;
 min-width: 16rem;
-height: 2rem;
+height: 3rem;
 margin-top: 2rem;
 border-radius: 6px;
 padding: 2rem;
@@ -46,7 +46,7 @@ export default function Card({ data }) {
         <div>
           <img src={getRandomImage()} alt="p1" className='pfp' />
           <svg class="status-dot" width="10" height="10">
-            <circle cx="5" cy="5" r="5" fill={getRandomColor()} />
+            <circle cx="5" cy="5" r="10" fill={getRandomColor()} />
           </svg>
         </div>
       </div>
@@ -54,12 +54,19 @@ export default function Card({ data }) {
         <p>
           {data.title}
         </p>
-        <button className='fr'>
-          <svg class="status-dot" width="10" height="10">
-            <circle cx="5" cy="5" r="5" fill="lightgray" />
-          </svg>
-          {data.tag}
-        </button>
+        <div className='e'>
+          <span className='material-symbols-outlined'>
+            more_horiz
+          </span>
+          <button className='fr'>
+            <svg class="status-dot1" width="10" height="10">
+              <circle cx="5" cy="5" r="5" fill="lightgray" />
+            </svg>
+            <span>
+              {data.tag}
+            </span>
+          </button>
+        </div>
       </div>
     </CardDad>
   )

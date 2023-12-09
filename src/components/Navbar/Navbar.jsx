@@ -39,7 +39,7 @@ export default function Navbar({ grouping, setGrouping, sorting, setSorting }) {
                             }}
                                 className='opts'
                             >
-                                <option value="" >Select Grouping</option>
+                                <option value="">Select Grouping</option>
                                 <option value="user">Group by User</option>
                                 <option value="priority">Group by Priority</option>
                                 <option value="status">Group by Status</option>

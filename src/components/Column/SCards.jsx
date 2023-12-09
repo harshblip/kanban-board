@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 const Divu = styled.div`
 margin-right: 2rem;
+display: flex;
+flex-direction: column;
 `
 
 export default function SCards({ tickets, status }) {
@@ -14,6 +16,11 @@ export default function SCards({ tickets, status }) {
   }
   return (
     <Divu>
+      <div>
+        {
+          
+        }
+      </div>
       {tickets.filter(ticket => ticket.status === status).map((index, x) => {
         return <Card data={index} key={x} />
       })}

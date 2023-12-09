@@ -13,15 +13,15 @@ margin-right: 2rem;
 font-family: 'Nunito Sans', sans-serif;
 `
 
-export default function GroupUser({ sorting, users }) {
+export default function GroupUser({ sorting, tickets }) {
   console.log('groupUsers', sorting)
   return (
     <Box>
-      <UCards users={users} user="Anoop sharma" key={users.id}/>
-      <UCards users={users} user="Yogesh" key={users.id}/>
-      <UCards users={users} user="Shankar Kumar" key={users.id}/>
-      <UCards users={users} user="Ramesh" key={users.id}/>
-      <UCards users={users} user="Suresh" key={users.id}/>
+      <UCards tickets={tickets} user="Anoop sharma" key={tickets.id}/>
+      <UCards tickets={tickets} user="Yogesh" key={tickets.id}/>
+      <UCards tickets={tickets} user="Shankar Kumar" key={tickets.id}/>
+      <UCards tickets={tickets} user="Ramesh" key={tickets.id}/>
+      <UCards tickets={tickets} user="Suresh" key={tickets.id}/>
     </Box>
   )
 }
