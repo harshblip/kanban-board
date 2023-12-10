@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from '../Card/Card'
 import styled from 'styled-components'
-import DummyCard from '../Card/DummyCard'
 
 const Divu = styled.div`
 margin-right: 2rem;
@@ -10,11 +9,14 @@ flex-direction: column;
 `
 
 export default function SCards({ tickets, status }) {
-  {
-    tickets.map((index) => {
-      console.log('hi', index.title)
-    })
-  }
+  let cnt = 0;
+  const filteredTickets = tickets.filter(tix => tix.status === status);
+  cnt += filteredTickets.length;
+  // {
+  //   tickets.map((index) => {
+  //     console.log('hi', index.title)
+  //   })
+  // }
 
   const statusIcons = {
     'Backlog': 'block',
@@ -22,8 +24,8 @@ export default function SCards({ tickets, status }) {
     'In progress': 'contrast',
     'Done': 'check_circle',
     'Cancelled': 'cancel',
-    'Add':'add',
-    "More":'more_horiz'
+    'Add': 'add',
+    "More": 'more_horiz'
   };
 
   const moreIcons = {
@@ -35,16 +37,20 @@ export default function SCards({ tickets, status }) {
   return (
     <div>
       <div className='srow'>
-
         <div className='m'>
           <span className={`material-symbols-outlined ${statusIcons[status]}-icon`}>
             {statusIcons[status]}
           </span>
-          <span className='ss'>
-            {status}
-          </span>
+          <div className='q'>
+            <span className='ss'>
+              {status}
+            </span>
+          </div>
         </div>
         <div className='v'>
+          <span className='fn1'>
+            {cnt}
+          </span>
           <span className={`material-symbols-outlined ${moreIcons["add"]}-icon`}>
             add
           </span>
@@ -53,11 +59,9 @@ export default function SCards({ tickets, status }) {
           </span>
         </div>
       </div>
-      {
-        tickets.filter(ticket => ticket.status === status).map((index, x) => {
-          return <Card data={index} key={x} />
-        })
-      }
+      {filteredTickets.map((ind, y) => {
+        return <Card data={ind} key={y} />
+      })}
     </div>
   )
 }

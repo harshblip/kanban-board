@@ -15,6 +15,9 @@ const moreIcons = {
 }
 
 export default function PCards({ tickets, priority }) {
+  let cnt = 0;
+  const filteredTickets = tickets.filter(tix => tix.priority === priority);
+  cnt += filteredTickets.length;
   return (
     <div>
       <div className='srow'>
@@ -40,6 +43,9 @@ export default function PCards({ tickets, priority }) {
                   return '';
               }
             })()}
+            <span className='cnt'>
+              {cnt}
+            </span>
           </span>
         </div>
         <div>
@@ -51,8 +57,10 @@ export default function PCards({ tickets, priority }) {
           </span>
         </div>
       </div>
-      {tickets.filter(ticket => ticket.priority === priority).map((index, x) => {
-        return <Card data={index} key={x} />
+      {filteredTickets.map((ind, y) => {
+        return <Card
+          data={ind}
+          key={y} />
       })}
     </div>
   )

@@ -106,7 +106,7 @@
 
 .material-symbols-outlined.add-icon {
   margin-top: 1.5rem;
-  margin-left: 0.8rem;
+  margin-left: 0.1rem;
 }
 
 .material-symbols-outlined.unknown_med-icon {
@@ -131,6 +131,12 @@
   overflow-y: visible;
   margin-left: 0.2rem;
   margin-top: 1.6rem;
+  width: 100px;
+}
+
+.cnt {
+  margin-left: 0.5rem;
+  color: #9c9b9b;
 }
 
 .srow {
@@ -140,14 +146,33 @@
 
 .v {
   display: flex;
+  position: fixed;
   width: inherit;
-  margin-left: 9rem;
+  margin-left: 16rem;
+}
+
+.m {
+  display: flex;
+}
+
+.q {
+  display: flex;
+  margin-right: -1.6rem;
+}
+
+.fn1 {
+  color: #9c9c9c;
+  font-weight: 600;
+  position: fixed;
+  margin-top: 1.8rem;
+  margin-left: 3.8rem;
 }
 
 @media only screen and (max-width: 800px) {
- .srow {
-  width: inherit;
- }
+  .srow {
+    width: inherit;
+  }
+
   .material-symbols-outlined.add-icon {
     margin-left: 0.8rem;
   }
@@ -155,8 +180,4 @@
   .material-symbols-outlined.more_horiz-icon {
     margin-top: 0rem;
   }
-}
-
-.m {
-  display: flex;
 }

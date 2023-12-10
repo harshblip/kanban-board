@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import GroupPriority from './components/GroupPriority/GroupPriority';
-import GroupStatus from './components/GroupStatus/GroupStatus';
-import GroupUser from './components/GroupUser/GroupUser';
+import GroupPriority from './components/GroupPriority';
+import GroupStatus from './components/GroupStatus';
+import GroupUser from './components/GroupUser';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home';
 import styled from 'styled-components';
@@ -41,12 +41,25 @@ export default function App() {
 
   return (
     <div className='App'>
-      <Navbar grouping={grouping} setGrouping={setGrouping} sorting={sorting} setSorting={setSorting} />
+      <Navbar
+        grouping={grouping}
+        setGrouping={setGrouping}
+        sorting={sorting}
+        setSorting={setSorting}
+      />
       <Layout>
-        {grouping === 'user' && <GroupUser sorting={sorting} tickets={tickets} users={users}/>}
-        {grouping === 'priority' && <GroupPriority sorting={sorting} tickets={tickets} />}
-        {grouping === 'status' && <GroupStatus sorting={sorting} tickets={tickets} />}
-        {!grouping && <GroupStatus sorting={sorting} tickets={tickets}  />}
+        {grouping === 'user' &&
+          <GroupUser sorting={sorting} tickets={tickets} users={users}
+          />}
+        {grouping === 'priority' &&
+          <GroupPriority sorting={sorting} tickets={tickets}
+          />}
+        {grouping === 'status' &&
+          <GroupStatus sorting={sorting} tickets={tickets}
+          />}
+        {!grouping &&
+          <GroupStatus sorting={sorting} tickets={tickets}
+          />}
       </Layout>
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SCards from '../Column/SCards'
+import SCards from './Column/SCards'
 
 const Box = styled.div`
 display: grid;

@@ -1,5 +1,5 @@
 import React from 'react'
-import PCards from '../Column/PCards'
+import PCards from './Column/PCards'
 import styled from 'styled-components'
 
 const Box = styled.div`
@@ -20,7 +20,6 @@ export default function GroupPriority({ sorting, tickets }) {
   // })}
   return (
     <Box>
-      {/* priority, array */}
       <PCards tickets={tickets} priority={0} key={tickets.id} />
       <PCards tickets={tickets} priority={1} key={tickets.id} />
       <PCards tickets={tickets} priority={2} key={tickets.id} />
