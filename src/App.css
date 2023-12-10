@@ -146,7 +146,6 @@
 
 .v {
   display: flex;
-  position: fixed;
   width: inherit;
   margin-left: 16rem;
 }
@@ -163,9 +162,8 @@
 .fn1 {
   color: #9c9c9c;
   font-weight: 600;
-  position: fixed;
   margin-top: 1.8rem;
-  margin-left: 3.8rem;
+  margin-left: -7.5rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -179,5 +177,9 @@
 
   .material-symbols-outlined.more_horiz-icon {
     margin-top: 0rem;
+  }
+
+  .fn1 {
+    margin-left: -8.5rem;
   }
 }
