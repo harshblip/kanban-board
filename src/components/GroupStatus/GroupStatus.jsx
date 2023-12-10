@@ -4,10 +4,10 @@ import SCards from '../Column/SCards'
 
 const Box = styled.div`
 display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-gap: 50px;
+grid-template-columns: repeat(5, minmax(200px, 1fr));
+grid-gap: 180px;
 overflow: auto;
-overflow-y: visible;
+overflow-y: auto;
 height: 100vh;
 margin-left: 2rem;
 margin-right: 2rem;

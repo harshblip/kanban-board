@@ -75,7 +75,7 @@
 }
 
 .material-symbols-outlined.block-icon {
-  color: #f4f5f8;
+  color: black;
   font-size: 36px;
   margin-top: 1rem;
 }
@@ -105,12 +105,12 @@
 }
 
 .material-symbols-outlined.add-icon {
-  color: #f4f5f8;
   margin-top: 1.5rem;
+  margin-left: 0.8rem;
 }
 
 .material-symbols-outlined.unknown_med-icon {
-  color: #f4f5f8;
+  color: black;
   font-size: 36px;
   margin-top: 1rem;
 }
@@ -136,6 +136,25 @@
 .srow {
   display: flex;
   justify-content: space-between;
+}
+
+.v {
+  display: flex;
+  width: inherit;
+  margin-left: 9rem;
+}
+
+@media only screen and (max-width: 800px) {
+ .srow {
+  width: inherit;
+ }
+  .material-symbols-outlined.add-icon {
+    margin-left: 0.8rem;
+  }
+
+  .material-symbols-outlined.more_horiz-icon {
+    margin-top: 0rem;
+  }
 }
 
 .m {

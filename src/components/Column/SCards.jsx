@@ -44,11 +44,11 @@ export default function SCards({ tickets, status }) {
             {status}
           </span>
         </div>
-        <div>
+        <div className='v'>
           <span className={`material-symbols-outlined ${moreIcons["add"]}-icon`}>
             add
           </span>
-          <span className='material-symbols-outlined'>
+          <span className={`material-symbols-outlined ${moreIcons["add"]}-icon`}>
             more_horiz
           </span>
         </div>

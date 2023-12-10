@@ -48,6 +48,12 @@
     margin-left: -2rem;
 }
 
+@media only screen and (max-width: 800px) {
+    .id {
+        margin-left: -2rem;
+    }
+}
+
 .col {
     display: flex;
     flex-direction: column;
